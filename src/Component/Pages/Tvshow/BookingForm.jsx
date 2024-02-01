@@ -1,4 +1,3 @@
-// BookingForm.js
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./Booking.css";
@@ -7,7 +6,6 @@ const BookingForm = ({ show, onClose, onSubmit }) => {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
-    // Add more user details as needed
   });
 
   const handleInputChange = (e) => {
@@ -20,15 +18,13 @@ const BookingForm = ({ show, onClose, onSubmit }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // You can perform additional booking-related actions here
-    // ...
 
     // Save booking in localStorage
     const bookingData = {
       movieName: show.name,
+      movieSchedul: `${show.schedule.time} on ${show.schedule.days.join(", ")}`,
       name: userData.name,
       email: userData.email,
-      // Add more data as needed
     };
     const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
     bookings.push(bookingData);
@@ -45,7 +41,6 @@ const BookingForm = ({ show, onClose, onSubmit }) => {
       confirmButtonText: "Go to Booking History",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Redirect to the booking history page (replace with your actual route)
         window.location.href = "/booking-history";
       }
     });
@@ -67,6 +62,18 @@ const BookingForm = ({ show, onClose, onSubmit }) => {
             <input type="text" name="movieName" value={show.name} readOnly />
           </label>
           <label>
+            Schedule:
+            <input
+              type="text"
+              name="movieSchedul"
+              value={`${show.schedule.time} on ${show.schedule.days.join(
+                ", "
+              )}`}
+              readOnly
+            />
+          </label>
+
+          <label>
             Your Name:
             <input
               type="text"
@@ -86,7 +93,7 @@ const BookingForm = ({ show, onClose, onSubmit }) => {
               required
             />
           </label>
-          {/* Add more form fields as needed */}
+
           <button
             className="btn   bg-red-500 text-white  hover:bg-black"
             type="submit"

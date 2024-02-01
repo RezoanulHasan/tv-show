@@ -1,4 +1,3 @@
-// ShowList.jsx
 import React, { useState, useEffect } from "react";
 import ShowCard from "./ShowCard";
 import Spinner from "./../../Shared/Spinner/Spinner";
@@ -80,8 +79,8 @@ const ShowList = () => {
           </div>
 
           <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="select-container">
-              <label className="text-gray-700 mr-2">Status Filter:</label>
+            <div className="select-container mt-2">
+              <label className="text-gray-700  mr-2">Status Filter:</label>
               <select
                 onChange={(e) => handleStatusFilterChange(e.target.value)}
               >
@@ -100,7 +99,7 @@ const ShowList = () => {
               </div>
             </div>
 
-            <div className="select-container">
+            <div className="select-container mt-2">
               <label className="text-gray-700 mr-2">Type Filter:</label>
               <select onChange={(e) => handleTypeFilterChange(e.target.value)}>
                 <option value="">All</option>
