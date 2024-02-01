@@ -12,7 +12,6 @@ const Home = () => {
     <div>
       <Slider></Slider>
       <h1 className="text-4xl">home</h1>
-
       <ShowList></ShowList>
     </div>
   );
