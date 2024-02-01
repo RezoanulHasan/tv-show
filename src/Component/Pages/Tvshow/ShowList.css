@@ -1,0 +1,54 @@
+/* Add this CSS to your existing styles or create a new CSS file */
+
+/* Styles for filters and search input */
+.select-container,
+.input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.select-container label,
+.input-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568; /* Adjust the color as needed */
+  font-size: 0.875rem; /* Adjust the font size as needed */
+}
+
+.select-container select,
+.input-container input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0; /* Adjust the border color as needed */
+  border-radius: 0.25rem;
+  background-color: #fff; /* Adjust the background color as needed */
+  color: #2d3748; /* Adjust the text color as needed */
+  font-size: 1rem; /* Adjust the font size as needed */
+  transition: border-color 0.3s ease;
+}
+
+.select-container select:hover,
+.select-container select:focus,
+.input-container input:hover,
+.input-container input:focus {
+  border-color: #4299e1; /* Adjust the focus border color as needed */
+}
+
+/* Styles for the dropdown icon */
+.select-container .icon,
+.input-container .icon {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  color: #a0aec0; /* Adjust the icon color as needed */
+}
+
+/* Add animation for the search icon */
+.input-container .icon svg {
+  transition: transform 0.3s ease;
+}
+
+.input-container input:focus + .icon svg {
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+}
