@@ -12,6 +12,13 @@ const ShowCard = ({ show, handleDetailsClick }) => {
   const closeModal = () => {
     document.getElementById("my_modal_5").close();
   };
+  const [statusFilter, setStatusFilter] = useState(null);
+  const [typeFilter, setTypeFilter] = useState(null);
+
+  // Apply filters to determine whether to display the card
+  const shouldDisplayCard =
+    (!statusFilter || show.status === statusFilter) &&
+    (!typeFilter || show.type === typeFilter);
 
   return (
     <div className="card card-compact w-full md:w-full bg-base-100 shadow-xl mx-auto my-4">

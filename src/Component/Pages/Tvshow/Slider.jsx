@@ -29,9 +29,11 @@ const Slider = ({ shows }) => {
         className="mySwiper"
       >
         {shows &&
-          shows.map((show) => (
+          shows?.map((show) => (
             <SwiperSlide key={show.id}>
-              <img src={show.image && show.image.medium} alt={show.name} />
+              <div className="relative overflow-hidden h-full transition-transform transform scale-100 hover:scale-150">
+                <img src={show?.image && show?.image.medium} alt={show.name} />
+              </div>
             </SwiperSlide>
           ))}
       </Swiper>
