@@ -12,8 +12,6 @@ const App = () => {
 
   return (
     <div id="top">
-      <Navbar />
-
       <div className="pt-24 min-h-[calc(100vh-68px)]">
         <Outlet />
       </div>

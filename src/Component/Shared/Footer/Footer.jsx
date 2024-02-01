@@ -12,9 +12,7 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Bookings</h6>
-          <a src className="link link-hover">
-            Book Tickets
-          </a>
+
           <Link to="/" className="link link-hover">
             Book Tickets
           </Link>
