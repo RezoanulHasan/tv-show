@@ -1,8 +1,33 @@
-# React + Vite
+# Project name: TV SHOW
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project-Type: Front End
 
-Currently, two official plugins are available:
+# [Live Website Link](https://splendorous-tanuki-84c6eb.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# [ Vedio-link: Link ](https://drive.google.com/file/d/1tbpcxOCfhLnW5RoZJd-WTlgiH50NjIz9/view?usp=sharing)
+
+
+
+## Technology use Frontend
+
+- React JS
+- Tailwindcss
+
+## Getting Started
+
+to set up and run projects locally
+
+- download this repository
+- npm install
+- npm run dev
+
+## Contact
+
+For any inquiries or further information, please reach out to:
+
+- Email: rezoanulhasan96@gmail.com
+- Phone: +088 01734639066
+
+Feel free to explore the website and enjoy your experience with TV SHOW project.
+
+
