@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Error from "./Component/Shared/Error/Error.jsx";
 import Home from "./Component/Pages/Home/Home.jsx";
+import BookingForm from "./Component/Pages/Tvshow/BookingForm.jsx";
+import BookingHistory from "./Component/Pages/Tvshow/BookingHistory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,10 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
 
-      // {
-      // path: "/:dataId",
-      // element:<Single></Single>,
-      // loader:({params}) => fetch("/data.json"),
-
-      // },
+      {
+        path: "/booking-history",
+        element: <BookingHistory></BookingHistory>,
+      },
     ],
   },
 ]);

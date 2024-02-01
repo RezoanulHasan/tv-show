@@ -1,7 +1,8 @@
 import useTitle from "../../../Hooks/useTitle";
 import React, { useEffect } from "react";
 import ShowList from "../Tvshow/ShowList";
-import Slider from "../Tvshow/Slider";
+import Container from "../../Shared/Container";
+
 const Home = () => {
   useTitle("Home"),
     useEffect(() => {
@@ -10,8 +11,6 @@ const Home = () => {
 
   return (
     <div>
-      <Slider></Slider>
-      <h1 className="text-4xl">home</h1>
       <ShowList></ShowList>
     </div>
   );

@@ -4,9 +4,9 @@ import ShowCard from "./ShowCard";
 import Spinner from "./../../Shared/Spinner/Spinner";
 import Slider from "./Slider";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
-import EmptyState from "./../../Shared/EmptyState"; // Import EmptyState component
-import "./ShowList.css"; // Import the CSS file
-
+import Heading from "../../Shared/Heading/Heading";
+import EmptyState from "./../../Shared/EmptyState";
+import "./ShowList.css";
 const ShowList = () => {
   const [shows, setShows] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -62,14 +62,23 @@ const ShowList = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">TV Shows</h1>
-
       {loading ? (
         <Spinner />
       ) : (
         <>
-          <SectionTitle subHeading="TV show" heading={<>Show view</>} />
+          <SectionTitle
+            subHeading="TV SHOW"
+            heading={<>Top Demandant Show </>}
+          />
           <Slider shows={shows} />
+          <div className="mt-20">
+            <Heading
+              title="Show List"
+              subtitle="All show info with booking process"
+              center={true}
+            />
+          </div>
+
           <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="select-container">
               <label className="text-gray-700 mr-2">Status Filter:</label>
@@ -127,7 +136,6 @@ const ShowList = () => {
               </div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredShows.length > 0 ? (
               filteredShows.map((show) => (
